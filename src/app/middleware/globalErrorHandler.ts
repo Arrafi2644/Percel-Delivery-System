@@ -17,7 +17,9 @@ export const globalErrorHandler = (err: any, req: Request, res: Response, next: 
     res.status(statusCode).json({
         success: false,
         message: message,
-        err: envVars.NODE_ENV === "development" ? err : null,
-        stack: envVars.NODE_ENV === "development" ? err.stack : null,
+        // err: envVars.NODE_ENV === "development" ? err : null,
+        // stack: envVars.NODE_ENV === "development" ? err.stack : null,
+        err,
+        stack: err.stack
     })
 }

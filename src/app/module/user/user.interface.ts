@@ -19,7 +19,7 @@ export interface IAuthProvider {
 }
 
 export interface IUser {
-    _id?: string;
+    _id?: Types.ObjectId;
     name: string;
     email: string;
     password: string;
@@ -30,7 +30,7 @@ export interface IUser {
     isActive?: IsActive;
     isVerified?: boolean;
     role: Role;
-    auths: IAuthProvider;
+    auths: IAuthProvider[];
     parcels?: Types.ObjectId;
 
 }
