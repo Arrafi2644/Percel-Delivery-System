@@ -97,7 +97,8 @@ src/
 ├── utils/
 ├── app.ts
 ├── server.ts
- 
+
+ ```
 ## ⚙️ Setup & Installation
 
 Follow these steps to get the Parcel Delivery API up and running locally:
@@ -106,21 +107,21 @@ Follow these steps to get the Parcel Delivery API up and running locally:
 ```bash
 git clone https://github.com/Arrafi2644/Percel-Delivery-System.git
 cd parcel-delivery-api
-
+```
 ### 2. Install dependencies
 ```bash
 npm install
-
+```
 ### 3. Create environment variables
 Create a .env file in the root directory ( you can refer to .env.example):
 
 ### 4. Run in development mode
 ```bash
 npm run dev
-
+```
 ### 5. Build and start the production server
 ```bash
 npm run build
 npm start
-
-### After running the dev server, your API should be accessible at http://localhost:5000.
+```
+ After running the dev server, your API should be accessible at http://localhost:5000.
