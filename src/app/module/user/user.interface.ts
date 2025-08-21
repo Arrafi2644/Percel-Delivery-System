@@ -31,6 +31,4 @@ export interface IUser {
     isVerified?: boolean;
     role: Role;
     auths: IAuthProvider[];
-    parcels?: Types.ObjectId;
-
 }

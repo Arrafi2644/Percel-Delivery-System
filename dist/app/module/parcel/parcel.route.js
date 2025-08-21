@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.parcelRoutes = void 0;
+const express_1 = require("express");
+const validateRequest_1 = require("../../middleware/validateRequest");
+const parcel_validation_1 = require("./parcel.validation");
+const parcel_controller_1 = require("./parcel.controller");
+const checkAuth_1 = require("../../middleware/checkAuth");
+const user_interface_1 = require("../user/user.interface");
+const router = (0, express_1.Router)();
+router.post("/", (0, checkAuth_1.checkAuth)(user_interface_1.Role.SENDER, user_interface_1.Role.ADMIN, user_interface_1.Role.SUPER_ADMIN), (0, validateRequest_1.validateRequest)(parcel_validation_1.CreateParcelZodSchema), parcel_controller_1.ParcelController.createParcel);
+router.patch("/cancel/:id", (0, checkAuth_1.checkAuth)(user_interface_1.Role.SENDER, user_interface_1.Role.ADMIN, user_interface_1.Role.SUPER_ADMIN), parcel_controller_1.ParcelController.cancelParcel);
+router.get("/", (0, checkAuth_1.checkAuth)(user_interface_1.Role.ADMIN, user_interface_1.Role.SUPER_ADMIN), parcel_controller_1.ParcelController.getAllParcel);
+router.get("/me", (0, checkAuth_1.checkAuth)(...Object.values(user_interface_1.Role)), parcel_controller_1.ParcelController.getMyParcels);
+router.get("/:id", (0, checkAuth_1.checkAuth)(...Object.values(user_interface_1.Role)), parcel_controller_1.ParcelController.getParcelById);
+router.patch("/:id", (0, checkAuth_1.checkAuth)(...Object.values(user_interface_1.Role)), parcel_controller_1.ParcelController.updateParcel);
+router.get("/:id/status-log", (0, checkAuth_1.checkAuth)(...Object.values(user_interface_1.Role)), parcel_controller_1.ParcelController.getParcelStatusLog);
+exports.parcelRoutes = router;
