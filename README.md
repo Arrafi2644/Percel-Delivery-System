@@ -1,9 +1,16 @@
 # Parcel Delivery API
 ### API Live Link: https://parcel-delivery-api-psi.vercel.app
+
+## Tech Stack
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green)](https://nodejs.org/)  
 [![Express](https://img.shields.io/badge/Express-5.x-lightgrey)](https://expressjs.com/)  
 [![MongoDB](https://img.shields.io/badge/MongoDB-8.x-green)](https://www.mongodb.com/)  
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)  
+[![Zod](https://img.shields.io/badge/Zod-3.22-purple)](https://zod.dev/)  
+[![JWT](https://img.shields.io/badge/JWT-Authentication-orange)](https://jwt.io/)  
+[![bcryptjs](https://img.shields.io/badge/bcryptjs-Password%20Hashing-yellow)](https://www.npmjs.com/package/bcryptjs)  
+[![CORS](https://img.shields.io/badge/CORS-Enabled-brightgreen)](https://www.npmjs.com/package/cors)  
+[![ESLint](https://img.shields.io/badge/ESLint-9.x-blueviolet)](https://eslint.org/)  
 
 ---
 
